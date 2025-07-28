@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize other features
     animateTechCards();
     animateSkillCategories();
+    initSkillsCarousel();
     initSmoothScroll();
     initScrollAnimations();
     initParallax();
@@ -150,6 +151,34 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.opacity = '1';
     }, 100);
 });
+
+// Skills Carousel Animation
+function initSkillsCarousel() {
+    const carouselRows = document.querySelectorAll('.carousel-row');
+
+    // Add random delays to create more organic movement
+    carouselRows.forEach((row, index) => {
+        const randomDelay = Math.random() * 5; // 0-5 seconds random delay
+        row.style.animationDelay = `-${randomDelay}s`;
+
+        // Vary animation speeds slightly
+        const baseSpeed = 60;
+        const speedVariation = (Math.random() - 0.5) * 10; // ±5 seconds
+        row.style.animationDuration = `${baseSpeed + speedVariation}s`;
+    });
+
+    // Add hover effects to individual pills
+    const skillPills = document.querySelectorAll('.skill-pill');
+    skillPills.forEach(pill => {
+        pill.addEventListener('mouseenter', function() {
+            this.style.animationPlayState = 'paused';
+        });
+
+        pill.addEventListener('mouseleave', function() {
+            this.style.animationPlayState = 'running';
+        });
+    });
+}
 
 // Skill Categories Animation
 function animateSkillCategories() {
