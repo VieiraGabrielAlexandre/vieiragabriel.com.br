@@ -1903,25 +1903,85 @@ section {
     background: linear-gradient(135deg, #3b82f6, #2563eb);
 }
 
-/* Art Theme */
+/* Art Theme for Sketchbook */
 .art-theme {
-    background: linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 50%, #F3E8FF 100%);
-    border: 3px solid #EC4899;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border: 2px solid #ff6b9d;
+    position: relative;
+    overflow: hidden;
 }
 
-.art-theme .bubble-content {
-    background: linear-gradient(135deg, #FEFCFF 0%, #FDF4FF 100%);
-    border: 2px solid #C084FC;
+.art-theme::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 157, 0.1) 0%, transparent 70%);
+    animation: artGlow 4s ease-in-out infinite alternate;
+    pointer-events: none;
 }
 
-.art-theme .bubble-content::before {
-    background: #EC4899;
+@keyframes artGlow {
+    0% { transform: rotate(0deg) scale(1); opacity: 0.3; }
+    100% { transform: rotate(180deg) scale(1.1); opacity: 0.1; }
 }
 
-.art-theme .bubble-content::after {
-    background: #EC4899;
+.art-theme .hobby-icon {
+    background: linear-gradient(135deg, #ff6b9d, #4ecdc4, #45b7d1);
+    background-size: 300% 300%;
+    animation: artIconGradient 3s ease infinite;
 }
 
+@keyframes artIconGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.art-theme h3 {
+    background: linear-gradient(135deg, #ff6b9d, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(255, 107, 157, 0.3);
+}
+
+.art-theme .status {
+    background: linear-gradient(135deg, #ff6b9d, #4ecdc4);
+    box-shadow: 0 0 15px rgba(255, 107, 157, 0.4);
+}
+
+.art-theme .btn {
+    background: linear-gradient(135deg, #ff6b9d, #4ecdc4);
+    border: 2px solid #ff6b9d;
+    position: relative;
+    overflow: hidden;
+}
+
+.art-theme .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.art-theme .btn:hover {
+    background: linear-gradient(135deg, #4ecdc4, #ff6b9d);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+    transform: translateY(-2px);
+}
+
+.art-theme .btn:hover::before {
+    left: 100%;
+}
+
+/* Art SVG Animations */
 .floating-art {
     position: absolute;
     top: 15px;
@@ -2125,6 +2185,56 @@ section {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
     background: linear-gradient(45deg, #BE185D, #9D174D);
+}
+
+.art-theme .thought-bubble {
+    background: rgba(255, 107, 157, 0.1);
+    border: 2px solid rgba(255, 107, 157, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.art-theme .thought-bubble::before {
+    border-color: rgba(255, 107, 157, 0.3) transparent transparent transparent;
+}
+
+/* Floating art elements */
+.floating-art-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.floating-art-elements::before,
+.floating-art-elements::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #ff6b9d;
+    border-radius: 50%;
+    animation: floatArt 6s ease-in-out infinite;
+}
+
+.floating-art-elements::before {
+    top: 20%;
+    left: 10%;
+    animation-delay: -2s;
+}
+
+.floating-art-elements::after {
+    top: 60%;
+    right: 15%;
+    background: #4ecdc4;
+    animation-delay: -4s;
+}
+
+@keyframes floatArt {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+    50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
 }
 
 /* Responsive Design */
