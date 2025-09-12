@@ -2125,6 +2125,21 @@ section {
     50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
 }
 
+/* Sketchbook Card Specific Styles */
+.hobby-card .lucide-palette {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Global mobile adjustments */
