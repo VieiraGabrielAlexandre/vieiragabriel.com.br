@@ -1903,6 +1903,80 @@ section {
     background: linear-gradient(135deg, #3b82f6, #2563eb);
 }
 
+/* Art Theme */
+.art-theme {
+    background: linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 50%, #F3E8FF 100%);
+    border: 3px solid #EC4899;
+}
+
+.art-theme .bubble-content {
+    background: linear-gradient(135deg, #FEFCFF 0%, #FDF4FF 100%);
+    border: 2px solid #C084FC;
+}
+
+.art-theme .bubble-content::before {
+    background: #EC4899;
+}
+
+.art-theme .bubble-content::after {
+    background: #EC4899;
+}
+
+.floating-art {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    animation: floatSVG 4s ease-in-out infinite;
+}
+
+.art-elements {
+    animation: drawArt 6s ease-in-out infinite;
+}
+
+@keyframes drawArt {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-5deg) scale(1.05); }
+    50% { transform: rotate(5deg) scale(0.95); }
+    75% { transform: rotate(-3deg) scale(1.02); }
+}
+
+/* Blocks Theme */
+.blocks-theme {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 50%, #FBBF24 100%);
+    border: 3px solid #F59E0B;
+}
+
+.blocks-theme .bubble-content {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 2px solid #FBBF24;
+}
+
+.blocks-theme .bubble-content::before {
+    background: #F59E0B;
+}
+
+.blocks-theme .bubble-content::after {
+    background: #F59E0B;
+}
+
+.floating-blocks {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    animation: floatSVG 3s ease-in-out infinite;
+}
+
+.block-elements {
+    animation: buildBlocks 5s ease-in-out infinite;
+}
+
+@keyframes buildBlocks {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(90deg); }
+    50% { transform: translateY(-10px) rotate(180deg); }
+    75% { transform: translateY(-15px) rotate(180deg); }
+}
+
 .blocks-theme {
     background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(30, 41, 59, 0.9));
     border-color: rgba(16, 185, 129, 0.3);
@@ -1972,6 +2046,85 @@ section {
     font-style: italic;
     margin: 0;
     font-size: 1rem;
+}
+
+/* Status badges */
+.status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+    margin-top: 8px;
+}
+
+.status.active {
+    background: linear-gradient(45deg, #10B981, #059669);
+}
+
+.status.launched {
+    background: linear-gradient(45deg, #8B5CF6, #7C3AED);
+}
+
+.status.concept {
+    background: linear-gradient(45deg, #6B7280, #4B5563);
+}
+
+.status.development {
+    background: linear-gradient(45deg, #F59E0B, #D97706);
+}
+
+.status.planning {
+    background: linear-gradient(45deg, #3B82F6, #2563EB);
+}
+
+/* Floating SVG animations */
+@keyframes floatSVG {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+        opacity: 1;
+    }
+}
+
+/* Wishlist links */
+.wishlist-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(45deg, #8B5CF6, #7C3AED);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.hobby-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(45deg, #EC4899, #BE185D);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.hobby-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+    background: linear-gradient(45deg, #BE185D, #9D174D);
 }
 
 /* Responsive Design */
