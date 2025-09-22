@@ -13,10 +13,55 @@ body {
     overflow-x: hidden;
 }
 
+.simple-menu {
+    background: #1e293b;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+.simple-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    gap: 1.5rem;
+}
+.simple-menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.simple-menu a:focus,
+.simple-menu a:hover {
+    background: #3b82f6;
+    color: #fff;
+    outline: 2px solid #8b5cf6;
+}
+
+:focus { outline: none; } /* se tiver */
+:focus-visible {
+    outline: 3px solid #8b5cf6;
+    outline-offset: 3px;
+    border-radius: 8px;
+}
+.btn:focus-visible { box-shadow: 0 0 0 4px rgba(139,92,246,.35); }
+a:focus-visible { text-decoration: underline; }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.skip-link {
+    position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus {
+    left: 1rem; top: 1rem; width:auto; height:auto; padding:.6rem 1rem;
+    background:#0ea5e9; color:#fff; border-radius:.5rem; z-index:10000;
 }
 
 /* Background Pattern */

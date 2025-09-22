@@ -130,20 +130,19 @@ function initIcons() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize icons first
-    initIcons();
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Start typing effect
+    initIcons();
     setTimeout(typeEffect, 1000);
 
-    // Initialize other features
     animateTechCards();
     animateSkillCategories();
     initSkillsCarousel();
-    initSmoothScroll();
-    initScrollAnimations();
-    initParallax();
 
+    if (!prefersReduced) {
+        initScrollAnimations();
+        initParallax();
+    }
 });
 
 // Skills Carousel Animation

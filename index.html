@@ -34,7 +34,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 
     <link rel="stylesheet" href="styles.css">
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
@@ -46,6 +46,17 @@
 <!-- End Google Tag Manager (noscript) -->
 <!-- Background Pattern -->
 <div class="bg-pattern"></div>
+
+<nav aria-label="Navegação principal" class="simple-menu">
+    <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#tech">Tecnologias</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#wishlist">Wishlist</a></li>
+        <li><a href="#contact">Contato</a></li>
+    </ul>
+</nav>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -65,12 +76,14 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="https://www.linkedin.com/in/gabrielalexandrevieira/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    <i data-lucide="linkedin"></i>
+                <a href="https://www.linkedin.com/in/gabrielalexandrevieira/" target="_blank" rel="noopener noreferrer"
+                   class="btn btn-primary" aria-label="Abrir perfil do Gabriel no LinkedIn">
+                    <i data-lucide="linkedin" aria-hidden="true"></i>
                     LinkedIn
                 </a>
-                <a href="https://wa.me/5511959217607" target="_blank" rel="noopener noreferrer" class="btn btn-success">
-                    <i data-lucide="message-circle"></i>
+                <a href="https://wa.me/5511959217607" target="_blank" rel="noopener noreferrer"
+                   class="btn btn-success" aria-label="Enviar mensagem para Gabriel no WhatsApp">
+                    <i data-lucide="message-circle" aria-hidden="true"></i>
                     WhatsApp
                 </a>
             </div>
