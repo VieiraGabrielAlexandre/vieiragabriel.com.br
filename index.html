@@ -47,23 +47,53 @@
 <!-- Background Pattern -->
 <div class="bg-pattern"></div>
 
-<nav aria-label="Navegação principal" class="simple-menu">
-    <ul>
-        <li><a href="#hero">Início</a></li>
-        <li><a href="#tech">Tecnologias</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#wishlist">Wishlist</a></li>
-        <li><a href="#contact">Contato</a></li>
-    </ul>
+<!-- Navigation Menu -->
+<nav class="navbar" role="navigation" aria-label="Menu principal">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="#home" class="brand-link" aria-label="Voltar ao início">
+                <i data-lucide="code-2" class="brand-icon"></i>
+                <span class="brand-text">Gabriel Vieira</span>
+            </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <div class="nav-menu" role="menubar">
+            <a href="#home" class="nav-link" role="menuitem" aria-label="Ir para início">
+                <i data-lucide="home" class="nav-icon"></i>
+                <span>Início</span>
+            </a>
+            <a href="#technologies" class="nav-link" role="menuitem" aria-label="Ir para habilidades">
+                <i data-lucide="code" class="nav-icon"></i>
+                <span>Skills</span>
+            </a>
+            <a href="#experience" class="nav-link" role="menuitem" aria-label="Ir para sobre mim">
+                <i data-lucide="user" class="nav-icon"></i>
+                <span>Sobre</span>
+            </a>
+            <a href="#personal-projects" class="nav-link" role="menuitem" aria-label="Ir para projetos">
+                <i data-lucide="folder" class="nav-icon"></i>
+                <span>Projetos</span>
+            </a>
+            <a href="#contact" class="nav-link" role="menuitem" aria-label="Ir para contato">
+                <i data-lucide="mail" class="nav-icon"></i>
+                <span>Contato</span>
+            </a>
+        </div>
+    </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="hero">
+<section id="home" class="hero">
     <div class="container">
         <div class="hero-content">
             <div class="hero-logo">
-                <img src="logo.svg" alt="Logotipo ‘GV’ de Gabriel Vieira" width="120" height="120" />
+                <img src="logo.svg" alt="Logotipo 'GV' de Gabriel Vieira" width="120" height="120" />
             </div>
             <h1 class="hero-title">Gabriel Vieira</h1>
             <div class="hero-subtitle">
@@ -122,7 +152,7 @@
 </section>
 
 <!-- Technologies Section -->
-<section class="technologies">
+<section id="technologies" class="technologies">
     <div class="container">
         <h2 class="section-title">Stack Tecnológico</h2>
 
@@ -642,7 +672,7 @@
 </section>
 
 <!-- Experience Section -->
-<section class="experience">
+<section id="experience" class="experience">
     <div class="container">
         <h2 class="section-title">Experiência Profissional</h2>
 
@@ -847,7 +877,7 @@
 </section>
 
 <!-- Personal Projects Section -->
-<section class="personal-projects">
+<section id="personal-projects" class="personal-projects">
     <div class="container">
         <h2 class="section-title">Projetos Pessoais</h2>
         <div class="projects-intro">
@@ -1151,7 +1181,7 @@
                 </div>
                 <div class="project-title">Caderno de Desenho</div>
                 <div class="project-description">
-                    🎨 Do “Boneco Palito” até a “Mona Lisa”, passando pelo inevitável círculo que mais parece uma
+                    🎨 Do "Boneco Palito" até a "Mona Lisa", passando pelo inevitável círculo que mais parece uma
                     batata 🥔, este projeto é um caderno digital moderno inspirado nos clássicos cadernos reais,
                     mas turbinado para você rabiscar sem limites, organizar suas criações, visualizar sua evolução
                     e compartilhar cada traço com o mundo
@@ -1264,7 +1294,7 @@
 </section>
 
 <!-- Contact Section -->
-<section class="contact">
+<section id="contact" class="contact">
     <div class="container">
         <div class="contact-content">
             <h2 class="section-title">Vamos Trabalhar Juntos?</h2>
